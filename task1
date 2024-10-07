@@ -1,0 +1,13 @@
+function createPlan(time) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve("План придуман, полетели!"), time);
+  });
+}
+
+createPlan(5000)
+  .then((res) => {
+    console.log(res);
+  })
+  .then(() => {
+    window.plans.planA = true;
+  });
